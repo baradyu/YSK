@@ -1,26 +1,6 @@
-import pandas as pd
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.support.ui import Select
-import selenium
-import time
-from selenium.common.exceptions import NoSuchElementException
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import ElementClickInterceptedException
-print('Modules imported.')
-# Setting Webdriver
-DRIVER_PATH = 'C:/Users/Berat/chromedriver'  # BILGISAYARDA chromedriver'ın bulunduğu yer
-options = Options()
-options.headless = False
-options.add_argument("--window-size=1920,1200")
-driver = webdriver.Chrome(options=options, executable_path=DRIVER_PATH)
-
 WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-arsiv-sonuc/div/div/div[2]/div[1]/div/div/fieldset/form/div[1]/div[2]/div[2]/ng-select/div/span[2]"))).click()
 dropdown_uzunluk = len(driver.find_elements_by_xpath("/html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-arsiv-sonuc/div/div/div[2]/div[1]/div/div/fieldset/form/div[1]/div[2]/div[2]/ng-select/ng-dropdown-panel/div/div[2]/div"))
-
-
+WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-arsiv-sonuc/div/div/div[2]/div[1]/div/div/fieldset/form/div[1]/div[2]/div[2]/ng-select/div/span[2]"))).click()
 data2 = []
 for i in range(1, 1+dropdown_uzunluk):
     try:
