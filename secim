@@ -18,7 +18,6 @@ options.add_argument("--window-size=1920,1200")
 driver = webdriver.Chrome(options=options, executable_path=DRIVER_PATH)
 
 driver.get('https://sonuc.ysk.gov.tr/sorgu')
-
 WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-secim/div/div/div[2]/div/div/div[2]/button/div/div/div/div[2]/h4"))).click()
 try:
     WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-arsiv-sorgu/div/div/div[2]/div[1]/div/div/form/div[1]/div/div/ng-select/div/span"))).click()
@@ -61,7 +60,7 @@ except ElementClickInterceptedException:
     time.sleep(1)
     WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-arsiv-sonuc/div/div/div[2]/div[1]/div/div/app-yurtici-ilce-listesi/fieldset/div[1]/table/tbody/tr[2]/td[1]/button/span[2]"))).click()
     
-    writer = pd.ExcelWriter(f'C:/Users/Berat/Documents/TEPAV/Seçim/27.DÖNEM.xlsx', engine='xlsxwriter')
+writer = pd.ExcelWriter(f'C:/Users/Berat/Documents/TEPAV/Seçim/27.DÖNEM.xlsx', engine='xlsxwriter')
 WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '/html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-arsiv-sonuc/div/div/div[2]/div[1]/div/div/fieldset/form/div[1]/div[2]/div[1]/ng-select/div/span[2]'))).click()
 şehir_dropdown = len(WebDriverWait(driver, 20).until(EC.visibility_of_all_elements_located((By.XPATH, '/html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-arsiv-sonuc/div/div/div[2]/div[1]/div/div/fieldset/form/div[1]/div[2]/div[1]/ng-select/ng-dropdown-panel/div/div[2]/div'))))
 WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '/html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-arsiv-sonuc/div/div/div[2]/div[1]/div/div/fieldset/form/div[1]/div[2]/div[1]/ng-select/div/span[2]'))).click()
