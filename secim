@@ -17,6 +17,51 @@ options.headless = False
 options.add_argument("--window-size=1920,1200")
 driver = webdriver.Chrome(options=options, executable_path=DRIVER_PATH)
 
+driver.get('https://sonuc.ysk.gov.tr/sorgu')
+
+WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-secim/div/div/div[2]/div/div/div[2]/button/div/div/div/div[2]/h4"))).click()
+try:
+    WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-arsiv-sorgu/div/div/div[2]/div[1]/div/div/form/div[1]/div/div/ng-select/div/span"))).click()
+except ElementClickInterceptedException:
+    time.sleep(1)
+    WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-arsiv-sorgu/div/div/div[2]/div[1]/div/div/form/div[1]/div/div/ng-select/div/span"))).click()
+try:
+    WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-arsiv-sorgu/div/div/div[2]/div[1]/div/div/form/div[1]/div/div/ng-select/ng-dropdown-panel/div/div[2]/div[3]/div"))).click()
+except ElementClickInterceptedException:
+    time.sleep(1) 
+    WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-arsiv-sorgu/div/div/div[2]/div[1]/div/div/form/div[1]/div/div/ng-select/ng-dropdown-panel/div/div[2]/div[3]/div"))).click()  
+try:
+    WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-arsiv-sorgu/div/div/div[2]/div[1]/div/div/form/div[1]/div[2]/div/ng-select/div/span"))).click()
+except ElementClickInterceptedException:
+    time.sleep(1) 
+    WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-arsiv-sorgu/div/div/div[2]/div[1]/div/div/form/div[1]/div[2]/div/ng-select/div/span"))).click()
+try:
+    WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-arsiv-sorgu/div/div/div[2]/div[1]/div/div/form/div[1]/div[2]/div/ng-select/ng-dropdown-panel/div/div[2]/div[2]/span"))).click()
+except ElementClickInterceptedException:
+    time.sleep(1)
+    WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-arsiv-sorgu/div/div/div[2]/div[1]/div/div/form/div[1]/div[2]/div/ng-select/ng-dropdown-panel/div/div[2]/div[2]/span"))).click()
+try:
+    WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-arsiv-sorgu/div/div/div[2]/div[1]/div/div/form/div[2]/div/div/button[1]"))).click()
+except ElementClickInterceptedException:
+    time.sleep(1)
+    WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-arsiv-sorgu/div/div/div[2]/div[1]/div/div/form/div[2]/div/div/button[1]"))).click()
+try:
+    WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-arsiv-sonuc/div/div/div[2]/div[1]/div/div/app-tum-dunya/fieldset/div[1]/table/tbody/tr[2]/td[1]/button/span[2]"))).click()
+except ElementClickInterceptedException:
+    time.sleep(1)    
+    WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-arsiv-sonuc/div/div/div[2]/div[1]/div/div/app-tum-dunya/fieldset/div[1]/table/tbody/tr[2]/td[1]/button/span[2]"))).click()
+try:
+    WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-arsiv-sonuc/div/div/div[2]/div[1]/div/div/app-yurtici-il-listesi/fieldset/div[1]/table/tbody/tr[2]/td[1]/button/span[2]"))).click()
+except ElementClickInterceptedException:
+    time.sleep(1)
+    WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-arsiv-sonuc/div/div/div[2]/div[1]/div/div/app-yurtici-il-listesi/fieldset/div[1]/table/tbody/tr[2]/td[1]/button/span[2]"))).click()
+try:
+    WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-arsiv-sonuc/div/div/div[2]/div[1]/div/div/app-yurtici-ilce-listesi/fieldset/div[1]/table/tbody/tr[2]/td[1]/button/span[2]"))).click()
+except ElementClickInterceptedException:
+    time.sleep(1)
+    WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-arsiv-sonuc/div/div/div[2]/div[1]/div/div/app-yurtici-ilce-listesi/fieldset/div[1]/table/tbody/tr[2]/td[1]/button/span[2]"))).click()
+    
+    writer = pd.ExcelWriter(f'C:/Users/Berat/Documents/TEPAV/Seçim/27.DÖNEM.xlsx', engine='xlsxwriter')
 WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '/html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-arsiv-sonuc/div/div/div[2]/div[1]/div/div/fieldset/form/div[1]/div[2]/div[1]/ng-select/div/span[2]'))).click()
 şehir_dropdown = len(WebDriverWait(driver, 20).until(EC.visibility_of_all_elements_located((By.XPATH, '/html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-arsiv-sonuc/div/div/div[2]/div[1]/div/div/fieldset/form/div[1]/div[2]/div[1]/ng-select/ng-dropdown-panel/div/div[2]/div'))))
 WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '/html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-arsiv-sonuc/div/div/div[2]/div[1]/div/div/fieldset/form/div[1]/div[2]/div[1]/ng-select/div/span[2]'))).click()
@@ -55,7 +100,7 @@ for i in range(1, şehir_dropdown):
         try:
             WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-arsiv-sonuc/div/div/div[2]/div[1]/div/div/fieldset/form/div[2]/div/div/button"))).click()
         except  ElementClickInterceptedException:
-            time.sleep(1)
+            time.sleep(2)
             WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-arsiv-sonuc/div/div/div[2]/div[1]/div/div/fieldset/form/div[2]/div/div/button"))).click()
         data = []
         buton_uzunluk = len(WebDriverWait(driver, 20).until(EC.visibility_of_all_elements_located((By.XPATH, "/html/body/app-root/app-vatandas/div[2]/app-vatandas-asistan-arsiv-sonuc/div/div/div[2]/div[1]/div/div/app-yurtici-muhtarlik-listesi/fieldset/div[1]/ngb-pagination/ul/li"))))
@@ -80,4 +125,6 @@ for i in range(1, şehir_dropdown):
     data3 = pd.concat(data2)
     data3.drop(['Bilgi', '* Tutanaklar'], axis=1, inplace=True) 
     data3 = data3.dropna(subset=['İlçe Adı'])
-    data3.to_excel(f'{şehir}.xlsx', index=False)
+    data3.to_excel(writer, sheet_name=şehir, index=False)
+writer.save()
+writer.close()
